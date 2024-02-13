@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import { SidebarProviderProps } from "../@types/Providers/SideBar";
+import { SideBarContextType } from "../@types/Contexts/SideBar";
 
 export const SidebarContext = createContext<SideBarContextType | null>(null);
 
