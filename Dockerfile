@@ -6,7 +6,6 @@ COPY . /app/
 RUN npm install
 
 RUN ["npm", "run", "build"]
-RUN ["npm", "prune", "--prod"]
 
 FROM nginx AS runtime
 
