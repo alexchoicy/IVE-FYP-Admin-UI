@@ -13,7 +13,7 @@ jobs:
         with:
           clean: false
       - name: Copy .env
-        run: cp ${ADMIN_ENV_PATH} .env
+        run: cp ${{secrets.ADMIN_ENV_PATH}} .env
       - name: Rebuild
         run: |
           docker compose stop
