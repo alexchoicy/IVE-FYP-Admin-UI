@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import { LoginRequest } from "../data/Request/AuthRequest";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export function Login() {
   const navigate = useNavigate();
   const [usernameError, setUsernameError] = useState(false);
@@ -12,7 +12,7 @@ export function Login() {
     if (token) {
       navigate("/", { replace: true });
     }
-  }, [Navigate]);
+  }, [navigate]);
 
   function handleSuccessLogin(data: UserInfo) {
     localStorage.setItem("token", data.token);

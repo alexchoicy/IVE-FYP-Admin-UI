@@ -11,7 +11,6 @@ import { Settings } from "../pages/settings.tsx";
 import { Home } from "../pages/Home.tsx";
 import { Profiles } from "../pages/Profiles.tsx";
 import { Profile } from "../pages/Profile.tsx";
-import { Layout } from "../components/Layout.tsx";
 import { Login } from "../pages/Login.tsx";
 import React from "react";
 import { SecureRoutes } from "./secureRoutes.tsx";

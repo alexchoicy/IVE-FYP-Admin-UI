@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "./SideBar";
 import { SidebarProvider } from "../provider/SidbarProvider";
-import { SecureRoutes } from "../routes/secureRoutes";
 
 export function Layout() {
   return (
