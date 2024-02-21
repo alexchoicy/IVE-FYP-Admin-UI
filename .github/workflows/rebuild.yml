@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           clean: false
+      - name: Copy .env
+        run: cp ${ADMIN_ENV_PATH} .env
       - name: Rebuild
         run: |
           docker compose stop
