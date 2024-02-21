@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
-import { LoginRequest } from "../data/Request/AuthRequest";
+import logo from "~/assets/logo.png";
+import { LoginRequest } from "~/data/Request/AuthRequest";
 import { useNavigate } from "react-router-dom";
 export function Login() {
   const navigate = useNavigate();

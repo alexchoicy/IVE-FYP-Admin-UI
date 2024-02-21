@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import { Layout } from "../components/Layout";
+import { Layout } from "~/components/Layout";
 
 function checkAuth(): boolean {
   const token = localStorage.getItem("token");

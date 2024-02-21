@@ -1,6 +1,6 @@
 import { Children } from "react";
-import CompanyLogo from "../assets/logo.png";
-import Icon from "../assets/Icon.png";
+import CompanyLogo from "~/assets/logo.png";
+import Icon from "~/assets/Icon.png";
 import { twMerge } from "tailwind-merge";
 import {
   IconLayoutSidebarLeftExpand,
@@ -8,8 +8,8 @@ import {
   IconLogout,
 } from "@tabler/icons-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useSidebarContext } from "../context/useSidebarContext";
-import { bottomSideBar, MainSideBar } from "../configs/SideBarConfig";
+import { useSidebarContext } from "~/context/useSidebarContext";
+import { bottomSideBar, MainSideBar } from "~/configs/SideBarConfig";
 
 export function Sidebar() {
   const { isSideBarOpen, toggle } = useSidebarContext();
