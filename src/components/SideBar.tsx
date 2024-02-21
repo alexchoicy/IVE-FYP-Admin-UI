@@ -7,18 +7,19 @@ import {
   IconLayoutSidebarRightExpand,
   IconLogout,
 } from "@tabler/icons-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSidebarContext } from "../context/useSidebarContext";
-import {
-  LargeSidebarItemProps,
-  LargeSidebarSectionProps,
-  SideBarItemProps,
-} from "../@types/components/SideBar";
 import { bottomSideBar, MainSideBar } from "../configs/SideBarConfig";
 
 export function Sidebar() {
   const { isSideBarOpen, toggle } = useSidebarContext();
   const location = useLocation();
+  const navigate = useNavigate();
+  function Logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/login", { replace: true });
+  }
   return (
     <>
       <aside
@@ -68,8 +69,8 @@ export function Sidebar() {
               <div>ADMIN</div>
               <div>Admin@gmail.com</div>
             </div>
-            <div className="text-SIDEBAR-LOGOUT">
-              <IconLogout />
+            <div className="text-SIDEBAR-LOGOUT hover:cursor-pointer">
+              <IconLogout onClick={Logout} />
             </div>
           </div>
         </div>

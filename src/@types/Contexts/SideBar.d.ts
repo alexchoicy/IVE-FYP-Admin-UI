@@ -1,4 +1,4 @@
-export type SideBarContextType = {
+type SideBarContextType = {
   isSideBarOpen: boolean;
   toggle: () => void;
 };

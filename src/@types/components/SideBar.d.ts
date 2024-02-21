@@ -1,4 +1,4 @@
-export type LargeSidebarItemProps = {
+type LargeSidebarItemProps = {
   title: string;
   url: string;
   Icon: React.ComponentType;
@@ -6,14 +6,14 @@ export type LargeSidebarItemProps = {
   isActive?: boolean;
 };
 
-export type LargeSidebarSectionProps = {
+type LargeSidebarSectionProps = {
   children: React.ReactNode;
   title: string;
   visibleItemCount?: number;
   className?: string;
 };
 
-export type SideBarItemProps = {
+type SideBarItemProps = {
   Icon: React.ElementType;
   title: string;
   url: string;

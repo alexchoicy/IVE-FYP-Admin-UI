@@ -7,7 +7,6 @@ import {
   IconReportAnalytics,
   IconSettings,
 } from "@tabler/icons-react";
-import { LargeSidebarItemProps } from "../@types/components/SideBar";
 
 export const MainSideBar: LargeSidebarItemProps[] = [
   {
