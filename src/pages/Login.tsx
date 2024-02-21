@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import logo from "~/assets/logo.png";
 import { LoginRequest } from "~/data/Request/AuthRequest";
 import { useNavigate } from "react-router-dom";
+import { IconLoader } from "@tabler/icons-react";
 export function Login() {
   const navigate = useNavigate();
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -21,16 +23,19 @@ export function Login() {
   }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    setLoading(true);
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const username = data.get("username")?.toString();
     const password = data.get("password")?.toString();
     if (!username || username === "") {
       setUsernameError(true);
+      setLoading(false);
       return;
     }
     if (!password || password === "") {
       setPasswordError(true);
+      setLoading(false);
       return;
     }
     setUsernameError(false);
@@ -40,6 +45,7 @@ export function Login() {
       password,
     };
     const response = await LoginRequest(loginRequest);
+    setLoading(false);
     if (response.statusCode === 401) {
       alert("Invalid username or password");
       return;
@@ -90,12 +96,21 @@ export function Login() {
             {passwordError ? (
               <p className="text-sm text-red-500">Password is required</p>
             ) : null}
-            <button
-              type="submit"
-              className="m-2 rounded bg-blue-500 p-2 text-white"
-            >
-              Login
-            </button>
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="m-2 flex w-40 items-center justify-center rounded bg-blue-500 p-3 text-white"
+              >
+                {loading ? (
+                  <>
+                    <IconLoader className="mr-2 h-5 w-5 animate-spin" />
+                    <span>Logging in</span>
+                  </>
+                ) : (
+                  "Login"
+                )}
+              </button>
+            </div>
           </form>
         </div>
       </div>
