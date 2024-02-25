@@ -18,7 +18,7 @@ export function Login() {
 
   function handleSuccessLogin(data: UserInfo) {
     localStorage.setItem("token", data.token);
-    localStorage.setItem("user", JSON.stringify(data));
+    localStorage.setItem("userInfo", JSON.stringify(data));
     navigate("/", { replace: true });
   }
 
@@ -100,11 +100,11 @@ export function Login() {
               <button
                 type="submit"
                 className="m-2 flex w-40 items-center justify-center rounded bg-blue-500 p-3 text-white"
+                disabled={loading}
               >
                 {loading ? (
                   <>
                     <IconLoader className="mr-2 h-5 w-5 animate-spin" />
-                    <span>Logging in</span>
                   </>
                 ) : (
                   "Login"

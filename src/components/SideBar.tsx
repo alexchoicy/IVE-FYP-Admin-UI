@@ -10,14 +10,16 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSidebarContext } from "~/context/useSidebarContext";
 import { bottomSideBar, MainSideBar } from "~/configs/SideBarConfig";
+import { useUserInfoContext } from "~/context/UserInfoContext";
 
 export function Sidebar() {
   const { isSideBarOpen, toggle } = useSidebarContext();
+  const { userInfo } = useUserInfoContext();
   const location = useLocation();
   const navigate = useNavigate();
   function Logout() {
     localStorage.removeItem("token");
-    localStorage.removeItem("user");
+    localStorage.removeItem("userInfo");
     navigate("/login", { replace: true });
   }
   return (
@@ -66,8 +68,10 @@ export function Sidebar() {
               <img className="h-10 w-10 rounded-full object-cover" src={Icon} />
             </div>
             <div className="font-bold text-SIDEBAR-TEXT">
-              <div>ADMIN</div>
-              <div>Admin@gmail.com</div>
+              <div>
+                {userInfo?.firstName}, {userInfo?.lastName}
+              </div>
+              <div>{userInfo?.email}</div>
             </div>
             <div className="text-SIDEBAR-LOGOUT hover:cursor-pointer">
               <IconLogout onClick={Logout} />

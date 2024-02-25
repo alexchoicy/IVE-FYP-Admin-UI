@@ -1,8 +1,7 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
+import { SidebarContext } from "~/context/useSidebarContext";
 
-export const SidebarContext = createContext<SideBarContextType | null>(null);
-
-export function SidebarProvider({ children }: SidebarProviderProps) {
+export function SidebarProvider({ children }: ProviderProps) {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
   function toggle() {

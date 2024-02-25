@@ -1,3 +1,3 @@
-type SidebarProviderProps = {
+type ProviderProps = {
   children: React.ReactNode;
 };
