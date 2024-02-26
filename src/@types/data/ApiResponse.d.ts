@@ -1,6 +1,6 @@
-type ApiResponse<Data> = {
+type ApiResponse<T> = {
   success: boolean;
   errormessage?: string;
-  data?: Data;
+  data?: T;
   statusCode: number; 
 };

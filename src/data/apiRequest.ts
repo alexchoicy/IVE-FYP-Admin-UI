@@ -1,14 +1,22 @@
-const apiDomain = import.meta.env.VITE_API_DOMAIN as string;
-const apiVersion = import.meta.env.VITE_API_VERSION as string;
-export async function apiRequest<T>(data : unknown, method : string, endpoint : string) : Promise<ApiResponse<T>> {
-    console.log(apiDomain, apiVersion, endpoint, method, data)
-    const response = await fetch(`${apiDomain}/${apiVersion}/${endpoint}`, {
-        method: method,
-        headers: {
-        "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-    });
-    const responseData : ApiResponse<T> = await response.json();
-    return responseData;
+class apiClient{
+    
+    async get<T>(endpoint: string) : Promise<ApiResponse<T> | null>{
+        try {
+        const respone = await fetch(`/api/${endpoint}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: "include",
+        });
+        const responseData : ApiResponse<T> = await respone.json();
+        
+        return responseData;
+        } catch (error) {
+            console.log(error)
+            return null;
+        }
+    }
 }
+
+export default new apiClient();
