@@ -12,7 +12,7 @@ export async function LoginRequest(data : LoginRequest) : Promise<ApiResponse<Us
 }
 
 export async function LogoutRequest() : Promise<boolean>{
-    const respone = await fetch('/api/v1/auth/admin/logout', {
+    const respone = await fetch('/api/v1/auth/logout', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
