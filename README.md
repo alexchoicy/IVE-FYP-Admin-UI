@@ -2,6 +2,8 @@ So UGLY.....
 ~~add Http-only cookie!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!~~ DONNNNNEEEE LESGGGOGOGOGOOGOGO
 i think we should have refresh token
 
+config the vite.config.ts server proxy for dev
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
