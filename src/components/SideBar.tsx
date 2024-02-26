@@ -11,13 +11,15 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSidebarContext } from "~/context/useSidebarContext";
 import { bottomSideBar, MainSideBar } from "~/configs/SideBarConfig";
 import { useUserInfoContext } from "~/context/UserInfoContext";
+import { LogoutRequest } from "~/data/Request/AuthRequest";
 
 export function Sidebar() {
   const { isSideBarOpen, toggle } = useSidebarContext();
   const { userInfo } = useUserInfoContext();
   const location = useLocation();
   const navigate = useNavigate();
-  function Logout() {
+  async function Logout() {
+    await LogoutRequest();
     localStorage.removeItem("userInfo");
     navigate("/login", { replace: true });
   }
