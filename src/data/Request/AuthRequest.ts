@@ -1,5 +1,5 @@
 export async function LoginRequest(data : LoginRequest) : Promise<ApiResponse<UserInfo>>{
-    const respone = await fetch('/api/auth/admin/login', {
+    const respone = await fetch('/api/v1/auth/admin/login', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

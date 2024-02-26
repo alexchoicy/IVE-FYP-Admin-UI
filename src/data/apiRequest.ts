@@ -2,7 +2,7 @@ class apiClient{
     
     async get<T>(endpoint: string) : Promise<ApiResponse<T> | null>{
         try {
-        const respone = await fetch(`/api/${endpoint}`, {
+        const respone = await fetch(`/api/v1/${endpoint}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
