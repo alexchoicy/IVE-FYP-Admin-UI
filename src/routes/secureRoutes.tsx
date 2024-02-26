@@ -2,8 +2,8 @@ import { Navigate } from "react-router-dom";
 import { Layout } from "~/components/Layout";
 
 function checkAuth(): boolean {
-  const token = localStorage.getItem("token");
-  if (token) {
+  const state = localStorage.getItem("userInfo");
+  if (state) {
     return true;
   }
   return false;

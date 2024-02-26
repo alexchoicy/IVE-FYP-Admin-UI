@@ -10,14 +10,13 @@ export function Login() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
+    const state = localStorage.getItem("userInfo");
+    if (state) {
       navigate("/", { replace: true });
     }
   }, [navigate]);
 
   function handleSuccessLogin(data: UserInfo) {
-    localStorage.setItem("token", data.token);
     localStorage.setItem("userInfo", JSON.stringify(data));
     navigate("/", { replace: true });
   }

@@ -18,7 +18,6 @@ export function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
   function Logout() {
-    localStorage.removeItem("token");
     localStorage.removeItem("userInfo");
     navigate("/login", { replace: true });
   }
