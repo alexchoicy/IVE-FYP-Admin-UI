@@ -1,4 +1,4 @@
 type userInfoContextType = {
-    userInfo: UserInfo | null;
+    userInfo: UserInfo;
     setUserInfo: (userInfo: UserInfo) => void;
 }

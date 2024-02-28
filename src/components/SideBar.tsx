@@ -26,7 +26,7 @@ export function Sidebar() {
   return (
     <>
       <aside
-        className={`pd-4 sticky top-0  h-full flex-col justify-between overflow-y-auto bg-SIDEBAR-BACKGROUND p-5 ${isSideBarOpen ? "flex" : "hidden"}`}
+        className={`pd-4 sticky top-0 h-screen w-2/12 flex-col justify-between overflow-y-auto bg-SIDEBAR-BACKGROUND p-5 ${isSideBarOpen ? "flex" : "hidden"}`}
       >
         <div>
           <div className="flex flex-row items-center justify-between">
@@ -74,7 +74,7 @@ export function Sidebar() {
               </div>
               <div>{userInfo?.email}</div>
             </div>
-            <div className="text-SIDEBAR-LOGOUT hover:cursor-pointer">
+            <div className=" flex items-center text-SIDEBAR-LOGOUT hover:cursor-pointer">
               <IconLogout onClick={Logout} />
             </div>
           </div>

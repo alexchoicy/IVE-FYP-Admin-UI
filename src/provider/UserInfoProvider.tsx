@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { UserInfoContext } from "~/context/UserInfoContext";
 
 export function UserInfoProvider({ children }: ProviderProps) {
-  const [userInfo, setUserInfo] = useState<UserInfo | null>(() => {
+  const [userInfo, setUserInfo] = useState<UserInfo>(() => {
     const userInfo = localStorage.getItem("userInfo");
     return userInfo ? JSON.parse(userInfo) : null;
   });

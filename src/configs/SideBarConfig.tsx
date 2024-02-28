@@ -1,4 +1,5 @@
 import {
+  Icon24Hours,
   IconBell,
   IconCalendar,
   IconCarGarage,
@@ -33,6 +34,11 @@ export const MainSideBar: LargeSidebarItemProps[] = [
     title: "Bookings",
     Icon: IconCalendar,
     url: "/bookings",
+  },
+  {
+    title: "Price",
+    Icon: Icon24Hours,
+    url: "/price",
   },
 ];
 
