@@ -1,11 +1,12 @@
-FROM node:21-slim AS build
+FROM node:21-alpine AS build
 WORKDIR /app
 
 COPY . /app/
 
-RUN npm install
+RUN corepack enable
+RUN pnpm fetch && pnpm install --frozen-lockfile --offline
 
-RUN ["npm", "run", "build"]
+RUN ["pnpm", "run", "build"]
 
 FROM nginx AS runtime
 
