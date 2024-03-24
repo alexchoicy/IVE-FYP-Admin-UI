@@ -16,7 +16,6 @@ import React from "react";
 import { SecureRoutes } from "./secureRoutes.tsx";
 import { Price } from "~/pages/price.tsx";
 import { Records } from "~/pages/ParkingRecords/Records.tsx";
-import { Recordsloader } from "./Loaders/Recordsloader.tsx";
 import { Record } from "~/pages/ParkingRecords/record.tsx";
 
 Sentry.init({

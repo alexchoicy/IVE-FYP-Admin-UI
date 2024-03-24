@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useUserInfoContext } from "~/context/UserInfoContext";
 import { getParkingRecords } from "~/data/Request/ParkingRecordRequest";
 
