@@ -4,5 +4,5 @@ type UserInfo = {
     firstName : string;
     lastName : string;
     email : string;
-    carParkID : string;
+    carParkID : number;
 }

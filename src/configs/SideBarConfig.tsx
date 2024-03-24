@@ -4,6 +4,7 @@ import {
   IconCalendar,
   IconCarGarage,
   IconChartPie,
+  IconHistory,
   IconLayoutDashboard,
   IconReportAnalytics,
   IconSettings,
@@ -34,6 +35,11 @@ export const MainSideBar: LargeSidebarItemProps[] = [
     title: "Bookings",
     Icon: IconCalendar,
     url: "/bookings",
+  },
+  {
+    title: "Records",
+    Icon: IconHistory,
+    url: "/records",
   },
   {
     title: "Price",

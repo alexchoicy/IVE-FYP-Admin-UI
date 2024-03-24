@@ -10,7 +10,7 @@ export function Layout() {
         <UserInfoProvider>
           <div className="flex h-screen w-screen flex-row">
             <Sidebar />
-            <div className="h-screen w-10/12">
+            <div className="h-full w-full bg-slate-200">
               <Outlet />
             </div>
           </div>

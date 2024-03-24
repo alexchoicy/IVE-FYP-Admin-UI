@@ -15,6 +15,9 @@ import { Login } from "~/pages/Login.tsx";
 import React from "react";
 import { SecureRoutes } from "./secureRoutes.tsx";
 import { Price } from "~/pages/price.tsx";
+import { Records } from "~/pages/ParkingRecords/Records.tsx";
+import { Recordsloader } from "./Loaders/Recordsloader.tsx";
+import { Record } from "~/pages/ParkingRecords/record.tsx";
 
 Sentry.init({
   dsn: "https://263dcf04ff838f8d40dc84e1b97a7bc8@o4506760346468352.ingest.sentry.io/4506760355577856",
@@ -61,6 +64,15 @@ export const router = sentryCreateBrowserRouter([
       {
         path: "price",
         element: <Price />,
+      },
+      {
+        path: "records",
+        // loader: Recordsloader,
+        element: <Records />,
+      },
+      {
+        path: "records/:id",
+        element: <Record />,
       },
     ],
   },

@@ -1,8 +1,8 @@
-import { getParkingLots } from "~/data/Request/ParkingLotsRequest";
+import { getParkingRecords } from "~/data/Request/ParkingRecordRequest";
 
 export function Home() {
   const handleClick = async () => {
-    const data = await getParkingLots();
+    const data = await getParkingRecords(1, 1, 20);
     console.log(data);
   };
 

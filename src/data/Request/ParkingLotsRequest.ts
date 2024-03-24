@@ -5,12 +5,12 @@ export async function getParkingLots() : Promise<ApiResponse<ParkingLotData[]> |
     return response;
 }
 
-export async function getParkingLot(id: string) : Promise<ApiResponse<ParkingLotData> | null>{
+export async function getParkingLot(id: number) : Promise<ApiResponse<ParkingLotData> | null>{
     const response = await apiClient.get<ParkingLotData>(`parkinglots/${id}`);
     return response;
 }
 
-export async function updateParkingLotPrice(id: string, prices: ParkingLotPrice[]) {
+export async function updateParkingLotPrice(id: number, prices: ParkingLotPrice[]) {
     const response = await apiClient.put<ParkingLotData>(`parkinglots/${id}/prices`, prices);
     return response;
 }
