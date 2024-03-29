@@ -1,6 +1,6 @@
 class apiClient{
     
-    async get<T>(endpoint: string) : Promise<ApiResponse<T> | null>{
+    async get<T>(endpoint: string, options: RequestInit = {}) : Promise<ApiResponse<T> | null>{
         try {
         const respone = await fetch(`/api/v1/${endpoint}`, {
             method: "GET",
@@ -8,6 +8,7 @@ class apiClient{
                 "Content-Type": "application/json",
             },
             credentials: "include",
+            ...options,
         });
         const responseData : ApiResponse<T> = await respone.json();
         

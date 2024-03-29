@@ -17,6 +17,9 @@ import { SecureRoutes } from "./secureRoutes.tsx";
 import { Price } from "~/pages/price.tsx";
 import { Records } from "~/pages/ParkingRecords/Records.tsx";
 import { Record } from "~/pages/ParkingRecords/record.tsx";
+import { ChatRoom } from "~/components/Chats/ChatRoom.tsx";
+import { ChatRoomIndex } from "~/components/Chats/ChatRoomIndex.tsx";
+import { ChatLayout } from "~/components/Chats/ChatLayout.tsx";
 
 Sentry.init({
   dsn: "https://263dcf04ff838f8d40dc84e1b97a7bc8@o4506760346468352.ingest.sentry.io/4506760355577856",
@@ -72,6 +75,14 @@ export const router = sentryCreateBrowserRouter([
       {
         path: "records/:id",
         element: <Record />,
+      },
+      {
+        path: "chats",
+        element: <ChatLayout />,
+        children: [
+          { index: true, element: <ChatRoomIndex /> },
+          { path: "/chats/:id", element: <ChatRoom /> },
+        ],
       },
     ],
   },

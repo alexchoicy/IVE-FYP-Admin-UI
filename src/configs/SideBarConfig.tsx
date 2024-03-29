@@ -2,10 +2,10 @@ import {
   Icon24Hours,
   IconBell,
   IconCalendar,
-  IconCarGarage,
   IconChartPie,
   IconHistory,
   IconLayoutDashboard,
+  IconMessage,
   IconReportAnalytics,
   IconSettings,
 } from "@tabler/icons-react";
@@ -26,11 +26,11 @@ export const MainSideBar: LargeSidebarItemProps[] = [
     Icon: IconReportAnalytics,
     url: "/reports",
   },
-  {
-    title: "Parking Lot",
-    Icon: IconCarGarage,
-    url: "/parking-lot",
-  },
+  // {
+  //   title: "Parking Lot",
+  //   Icon: IconCarGarage,
+  //   url: "/parking-lot",
+  // },
   {
     title: "Bookings",
     Icon: IconCalendar,
@@ -45,6 +45,11 @@ export const MainSideBar: LargeSidebarItemProps[] = [
     title: "Price",
     Icon: Icon24Hours,
     url: "/price",
+  },
+  {
+    title: "Chats",
+    Icon: IconMessage,
+    url: "/chats",
   },
 ];
 
