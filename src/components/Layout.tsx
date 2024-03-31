@@ -8,7 +8,7 @@ export function Layout() {
     <>
       <SidebarProvider>
         <UserInfoProvider>
-          <div className="flex h-screen w-screen flex-row">
+          <div className="flex h-full max-h-full w-full max-w-full flex-row">
             <Sidebar />
             <div className="h-full w-full bg-slate-200">
               <Outlet />

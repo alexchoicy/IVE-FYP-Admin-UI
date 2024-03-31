@@ -14,7 +14,7 @@ export const MainSideBar: LargeSidebarItemProps[] = [
   {
     title: "Dashboard",
     Icon: IconLayoutDashboard,
-    url: "/dashboard",
+    url: "/",
   },
   {
     title: "Analytics",

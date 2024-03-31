@@ -82,7 +82,7 @@ export function Sidebar() {
       </aside>
       {/* This is the sidebar when it is collapsed */}
       <aside
-        className={` pd-4 relative top-0 h-full flex-col justify-between overflow-y-auto overflow-x-hidden bg-SIDEBAR-BACKGROUND p-5 ${isSideBarOpen ? "hidden" : "flex"}`}
+        className={` pd-4 sticky top-0 h-screen flex-col justify-between overflow-y-auto overflow-x-hidden bg-SIDEBAR-BACKGROUND p-5 ${isSideBarOpen ? "hidden" : "flex"}`}
       >
         <div className="flex flex-row items-center justify-between">
           <Link to="/">
