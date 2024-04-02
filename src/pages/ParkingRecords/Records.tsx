@@ -59,10 +59,10 @@ export function Records() {
               <tr key={record.sessionID} className="border-b">
                 <td className="px-6 py-6">{record.vehicleLicense}</td>
                 <td className="px-6 py-6">
-                  {new Date(record.entryTime).toLocaleString("en-US", {
+                  {new Date(record.entryTime).toLocaleString("en-GB", {
                     weekday: "long",
                     year: "numeric",
-                    month: "long",
+                    month: "numeric",
                     day: "numeric",
                     hour: "numeric",
                     minute: "numeric",
@@ -72,10 +72,10 @@ export function Records() {
                 </td>
                 <td className="px-6 py-6">
                   {record.exitTime != null
-                    ? new Date(record.exitTime).toLocaleString("en-US", {
+                    ? new Date(record.exitTime).toLocaleString("en-GB", {
                         weekday: "long",
                         year: "numeric",
-                        month: "long",
+                        month: "numeric",
                         day: "numeric",
                         hour: "numeric",
                         minute: "numeric",

@@ -12,7 +12,6 @@ import {
 } from "chart.js";
 import { Doughnut, Line } from "react-chartjs-2";
 import { getDashboardData } from "~/data/Request/DashBoardRequest";
-import { getParkingRecords } from "~/data/Request/ParkingRecordRequest";
 
 export function Home() {
   const [dashboardData, setDashboardData] = useState<DashboardResponce | null>(
@@ -30,11 +29,6 @@ export function Home() {
     Tooltip,
     Legend,
   );
-
-  const handleClick = async () => {
-    const data = await getParkingRecords(1, 1, 20);
-    console.log(data);
-  };
 
   useEffect(() => {
     const fetchData = async () => {

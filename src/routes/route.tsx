@@ -21,8 +21,8 @@ import { ChatRoom } from "~/components/Chats/ChatRoom.tsx";
 import { ChatRoomIndex } from "~/components/Chats/ChatRoomIndex.tsx";
 import { ChatLayout } from "~/components/Chats/ChatLayout.tsx";
 import { Analytics } from "~/pages/Analytics.tsx";
-import { Bookings } from "~/pages/Bookings.tsx";
-import { Booking } from "~/pages/Booking.tsx";
+import { Bookings } from "~/pages/Bookings/Bookings.tsx";
+import { Booking } from "~/pages/Bookings/Booking.tsx";
 
 Sentry.init({
   dsn: "https://263dcf04ff838f8d40dc84e1b97a7bc8@o4506760346468352.ingest.sentry.io/4506760355577856",

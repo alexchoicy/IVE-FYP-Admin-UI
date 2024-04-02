@@ -21,11 +21,11 @@ export const MainSideBar: LargeSidebarItemProps[] = [
     Icon: IconChartPie,
     url: "/analytics",
   },
-  {
-    title: "Reports",
-    Icon: IconReportAnalytics,
-    url: "/reports",
-  },
+  // {
+  //   title: "Reports",
+  //   Icon: IconReportAnalytics,
+  //   url: "/reports",
+  // },
   // {
   //   title: "Parking Lot",
   //   Icon: IconCarGarage,

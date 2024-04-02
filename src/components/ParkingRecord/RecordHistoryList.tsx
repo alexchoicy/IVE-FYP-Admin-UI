@@ -17,10 +17,10 @@ export function RecordHistoryList({
               <div className="flex">
                 <div className="w-1/5">Entry Time :</div>
                 <div className="pl-12">
-                  {new Date(record.entryTime).toLocaleString("en-US", {
+                  {new Date(record.entryTime).toLocaleString("en-GB", {
                     weekday: "long",
                     year: "numeric",
-                    month: "long",
+                    month: "numeric",
                     day: "numeric",
                     hour: "numeric",
                     minute: "numeric",
@@ -33,10 +33,10 @@ export function RecordHistoryList({
                 <div className="w-1/5">Exit Time :</div>
                 <div className="pl-12">
                   {record.exitTime != null
-                    ? new Date(record.exitTime).toLocaleString("en-US", {
+                    ? new Date(record.exitTime).toLocaleString("en-GB", {
                         weekday: "long",
                         year: "numeric",
-                        month: "long",
+                        month: "numeric",
                         day: "numeric",
                         hour: "numeric",
                         minute: "numeric",

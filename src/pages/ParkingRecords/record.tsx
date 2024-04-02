@@ -1,21 +1,29 @@
 import { IconChevronLeft } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { RecordHistoryList } from "~/components/ParkingRecord/RecordHistoryList";
 import { getParkingRecord } from "~/data/Request/ParkingRecordRequest";
 
 export function Record() {
   const params = useParams();
   const [record, setRecord] = useState<ParkingRecord>();
+  const history = useNavigate();
   console.log(params);
 
   useEffect(() => {
+    if (!params.id || !parseInt(params.id)) {
+      history("/records");
+      return;
+    }
+
     const fetchRecord = async () => {
       const response = await getParkingRecord(
         parseInt(params.id ? params.id : "0"),
       );
       console.log(response);
       if (!response) {
+        alert("Record not found");
+        history("/records");
         return;
       }
       setRecord(response.data);
@@ -44,10 +52,10 @@ export function Record() {
         <div className="flex">
           <div className="w-1/5">Entry Time :</div>
           <div className="pl-12">
-            {new Date(record.entryTime).toLocaleString("en-US", {
+            {new Date(record.entryTime).toLocaleString("en-GB", {
               weekday: "long",
               year: "numeric",
-              month: "long",
+              month: "numeric",
               day: "numeric",
               hour: "numeric",
               minute: "numeric",
@@ -60,10 +68,10 @@ export function Record() {
           <div className="w-1/5">Exit Time :</div>
           <div className="pl-12">
             {record.exitTime != null
-              ? new Date(record.exitTime).toLocaleString("en-US", {
+              ? new Date(record.exitTime).toLocaleString("en-GB", {
                   weekday: "long",
                   year: "numeric",
-                  month: "long",
+                  month: "numeric",
                   day: "numeric",
                   hour: "numeric",
                   minute: "numeric",
