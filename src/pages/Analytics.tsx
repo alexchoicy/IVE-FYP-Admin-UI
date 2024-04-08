@@ -10,7 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Bar, Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 import { getAnalyticsData } from "~/data/Request/AnalyticsRequest";
 import { AnalyticsBox } from "~/components/Analytics/AnalyticsBox";

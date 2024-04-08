@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import logo from "~/assets/logo.png";
-import { LoginRequest } from "~/data/Request/AuthRequest";
+import { LoginRequest, checkAuth } from "~/data/Request/AuthRequest";
 import { useNavigate } from "react-router-dom";
 import { IconLoader } from "@tabler/icons-react";
 export function Login() {
@@ -10,10 +10,13 @@ export function Login() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const state = localStorage.getItem("userInfo");
-    if (state) {
-      navigate("/", { replace: true });
-    }
+    const authStatus = async () => {
+      const isLoggedin = await checkAuth();
+      if (isLoggedin) {
+        navigate("/", { replace: true });
+      }
+    };
+    authStatus();
   }, [navigate]);
 
   function handleSuccessLogin(data: UserInfo) {

@@ -6,7 +6,6 @@ import {
   IconHistory,
   IconLayoutDashboard,
   IconMessage,
-  IconReportAnalytics,
   IconSettings,
 } from "@tabler/icons-react";
 
