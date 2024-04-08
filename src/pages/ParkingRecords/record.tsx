@@ -88,7 +88,7 @@ export function Record() {
         <div className="flex">
           <div className="w-1/5">Total Price :</div>
           <div className="pl-12">
-            {record?.totalPrice
+            {record?.totalPrice != null
               ? record.totalPrice
               : "The total Price is not calculated yet"}
           </div>
