@@ -110,7 +110,7 @@ export function Booking() {
       if (editResponse?.success) {
         alert("Booking Edited");
       } else {
-        alert(editResponse?.errormessage);
+        alert(editResponse?.errorMessage);
       }
       window.location.reload();
     };
@@ -134,7 +134,7 @@ export function Booking() {
         alert("Booking Cancelled");
         history("/bookings");
       } else {
-        alert(cancelResponse?.errormessage);
+        alert(cancelResponse?.errorMessage);
         history("/bookings");
       }
     };

@@ -1,8 +1,8 @@
 type ApiResponse<T> = {
   success: boolean;
-  errormessage?: string;
+  errorMessage?: string;
   data?: T;
-  statusCode: number; 
+  statusCode: number;
 };
 
 type PagedReponse<T> = {
@@ -13,4 +13,4 @@ type PagedReponse<T> = {
   totalPages: number;
   hasNext: boolean;
   hasPrevious: boolean;
-}
+};
