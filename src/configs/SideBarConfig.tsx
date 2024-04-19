@@ -1,12 +1,12 @@
 import {
   Icon24Hours,
-  IconBell,
+  // IconBell,
   IconCalendar,
   IconChartPie,
   IconHistory,
   IconLayoutDashboard,
   IconMessage,
-  IconSettings,
+  // IconSettings,
 } from "@tabler/icons-react";
 
 export const MainSideBar: LargeSidebarItemProps[] = [
