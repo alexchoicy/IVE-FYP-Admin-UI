@@ -53,14 +53,14 @@ export const MainSideBar: LargeSidebarItemProps[] = [
 ];
 
 export const bottomSideBar: LargeSidebarItemProps[] = [
-  {
-    title: "Settings",
-    Icon: IconSettings,
-    url: "/settings",
-  },
-  {
-    title: "Notifications",
-    Icon: IconBell,
-    url: "/notifications",
-  },
+  // {
+  //   title: "Settings",
+  //   Icon: IconSettings,
+  //   url: "/settings",
+  // },
+  // {
+  //   title: "Notifications",
+  //   Icon: IconBell,
+  //   url: "/notifications",
+  // },
 ];
