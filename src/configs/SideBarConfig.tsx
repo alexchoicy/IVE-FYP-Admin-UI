@@ -1,12 +1,12 @@
 import {
   Icon24Hours,
-  IconBell,
+  // IconBell,
   IconCalendar,
   IconChartPie,
   IconHistory,
   IconLayoutDashboard,
   IconMessage,
-  IconSettings,
+  // IconSettings,
 } from "@tabler/icons-react";
 
 export const MainSideBar: LargeSidebarItemProps[] = [
@@ -53,14 +53,14 @@ export const MainSideBar: LargeSidebarItemProps[] = [
 ];
 
 export const bottomSideBar: LargeSidebarItemProps[] = [
-  {
-    title: "Settings",
-    Icon: IconSettings,
-    url: "/settings",
-  },
-  {
-    title: "Notifications",
-    Icon: IconBell,
-    url: "/notifications",
-  },
+  // {
+  //   title: "Settings",
+  //   Icon: IconSettings,
+  //   url: "/settings",
+  // },
+  // {
+  //   title: "Notifications",
+  //   Icon: IconBell,
+  //   url: "/notifications",
+  // },
 ];
