@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function RecordHistoryList({
   history,
 }: {
@@ -57,6 +59,21 @@ export function RecordHistoryList({
               <div className="flex">
                 <div className="w-1/5">Payment Status :</div>
                 <div className="pl-12">{record.paymentStatus}</div>
+              </div>
+              <div className="flex">
+                <div className="w-1/5">Related Reservation :</div>
+                <div className="pl-12">
+                  {record.reservation == null ? (
+                    "No Related Reservation"
+                  ) : (
+                    <Link
+                      to={`/bookings/${record.reservation.reservationID}`}
+                      className="inline-block rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                    >
+                      Go to Reservation {record.reservation.reservationID}
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           ))}
