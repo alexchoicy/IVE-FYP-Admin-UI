@@ -48,6 +48,7 @@ export function Records() {
         <table className="w-full border-collapse items-center text-left ">
           <thead>
             <tr>
+              <th className="px-6">Session ID</th>
               <th className="px-6">Car Plate</th>
               <th className="px-6">Entry Time</th>
               <th className="px-6">Exit Time</th>
@@ -57,6 +58,7 @@ export function Records() {
           <tbody>
             {records.map((record) => (
               <tr key={record.sessionID} className="border-b">
+                <td className="px-6 py-6">{record.sessionID}</td>
                 <td className="px-6 py-6">{record.vehicleLicense}</td>
                 <td className="px-6 py-6">
                   {new Date(record.entryTime).toLocaleString("en-GB", {
